@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+      prefWidth="400.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="ro.ctrln.javafx.calculator.controller.CalculatorController">
+    <SplitPane fx:id="splitPanel" dividerPositions="0.25" orientation="VERTICAL" prefHeight="400.0" prefWidth="400.0">
+      <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+              <children>
+                  <TextArea fx:id="calculatorOperationsArea" layoutX="13.0" layoutY="48.0"
+                            onKeyTyped="#handleKeyTyped" prefHeight="35.0" prefWidth="373.0"/>
+                  <Label fx:id="errorsLabel" layoutX="138.0" layoutY="14.0" text="CtrlN JavaFX Calculator"/>
+              </children>
+          </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+              <children>
+                  <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#writeSeven"
+                          prefHeight="53.0" prefWidth="55.0" text="7"/>
+                  <Button layoutX="14.0" layoutY="77.0" mnemonicParsing="false" onAction="#writeFour"
+                          prefHeight="53.0" prefWidth="55.0" text="4"/>
+                  <Button layoutX="14.0" layoutY="141.0" mnemonicParsing="false" onAction="#writeOne"
+                          prefHeight="53.0" prefWidth="55.0" text="1"/>
+                  <Button layoutX="14.0" layoutY="205.0" mnemonicParsing="false" onAction="#writeZero"
+                          prefHeight="53.0" prefWidth="55.0" text="0"/>
+                  <Button layoutX="80.0" layoutY="14.0" mnemonicParsing="false" onAction="#writeEight"
+                          prefHeight="53.0" prefWidth="55.0" text="8"/>
+                  <Button layoutX="80.0" layoutY="77.0" mnemonicParsing="false" onAction="#writeFive"
+                          prefHeight="53.0" prefWidth="55.0" text="5"/>
+                  <Button layoutX="80.0" layoutY="141.0" mnemonicParsing="false" onAction="#writeTwo"
+                          prefHeight="53.0" prefWidth="55.0" text="2"/>
+                  <Button layoutX="80.0" layoutY="205.0" mnemonicParsing="false" onAction="#writeComma"
+                          prefHeight="53.0" prefWidth="55.0" text=","/>
+                  <Button layoutX="146.0" layoutY="14.0" mnemonicParsing="false" onAction="#writeNine"
+                          prefHeight="53.0" prefWidth="55.0" text="9"/>
+                  <Button layoutX="146.0" layoutY="77.0" mnemonicParsing="false" onAction="#writeSix"
+                          prefHeight="53.0" prefWidth="55.0" text="6"/>
+                  <Button layoutX="146.0" layoutY="141.0" mnemonicParsing="false" onAction="#writeThree"
+                          prefHeight="53.0" prefWidth="55.0" text="3"/>
+                  <Button layoutX="146.0" layoutY="205.0" mnemonicParsing="false" onAction="#evaluate"
+                          prefHeight="53.0" prefWidth="55.0" text="="/>
+                  <Button layoutX="216.0" layoutY="14.0" mnemonicParsing="false" onAction="#addition"
+                          prefHeight="53.0" prefWidth="170.0" text="+"/>
+                  <Button layoutX="216.0" layoutY="77.0" mnemonicParsing="false" onAction="#subtraction"
+                          prefHeight="53.0" prefWidth="170.0" text="-"/>
+                  <Button layoutX="216.0" layoutY="141.0" mnemonicParsing="false" onAction="#division"
+                          prefHeight="53.0" prefWidth="170.0" text="/"/>
+                  <Button layoutX="216.0" layoutY="205.0" mnemonicParsing="false" onAction="#multiplication"
+                          prefHeight="53.0" prefWidth="78.0" text="*"/>
+                  <Button layoutX="306.0" layoutY="205.0" mnemonicParsing="false"
+                          onAction="#clearCalculatorOperationsArea" prefHeight="53.0" prefWidth="78.0" text="Clear"/>
+              </children>
+          </AnchorPane>
+      </items>
+    </SplitPane>
+</Pane>
